@@ -55,7 +55,7 @@ public class MapsActivityRaw extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
     
-        googleMap.setTrafficEnabled();
+        googleMap.setTrafficEnabled(true);
     
         try {
             // Customise the styling of the base map using a JSON object defined
@@ -71,6 +71,6 @@ public class MapsActivityRaw extends AppCompatActivity
             Log.e(TAG, "Can't find style. Error: ", e);
         }
         // Position the map's camera near Sydney, Australia.
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-119.546703, 37.806914), 16));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.806914, -119.546703), 16));
     }
 }
