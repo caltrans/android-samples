@@ -71,6 +71,6 @@ public class MapsActivityRaw extends AppCompatActivity
             Log.e(TAG, "Can't find style. Error: ", e);
         }
         // Position the map's camera near Sydney, Australia.
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.806914, -119.546703), 16));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(34.6229538, -119.3095251), 16));
     }
 }
