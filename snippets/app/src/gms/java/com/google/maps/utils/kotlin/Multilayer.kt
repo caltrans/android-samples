@@ -34,12 +34,14 @@ import com.google.maps.example.R
 import org.json.JSONException
 import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
+import java.lang.IndexOutOfBoundsException
 import kotlin.jvm.Throws
 
 internal class Multilayer {
     private val map: GoogleMap? = null
     private val context: Context? = null
 
+    @Suppress("IndexOutOfBoundsException")
     @Throws(IOException::class, JSONException::class, XmlPullParserException::class)
     private fun init() {
         // [START maps_android_utils_multilayer_init]
@@ -120,12 +122,16 @@ internal class Multilayer {
             return position
         }
 
-        override fun getTitle(): String? {
+        override fun getTitle(): String {
             return title
         }
 
-        override fun getSnippet(): String? {
+        override fun getSnippet(): String {
             return snippet
+        }
+
+        override fun getZIndex(): Float {
+            return 0f
         }
 
         init {

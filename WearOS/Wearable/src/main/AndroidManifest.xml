@@ -15,8 +15,7 @@
   limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wearosmap" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Mark this app as a Wear OS app. -->
     <uses-feature android:name="android.hardware.type.watch" />
@@ -28,18 +27,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.DeviceDefault" >
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
 
-        <!-- API key for the Android Maps API v2. The value is defined as a string resource. -->
+        <!-- API key for the Android Maps API v2. The value is defined in local.properties. -->
         <meta-data android:name="com.google.android.geo.API_KEY"
-                   android:value="@string/google_maps_key"/>
+                   android:value="${GOOGLE_MAPS_API_KEY}"/>
 
         <!-- Reference the wearable shared library required to support ambient mode. -->
         <uses-library android:name="com.google.android.wearable" android:required="false" />
 
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".kt.MainActivity"
+            android:label="@string/app_name"
+            android:exported="true" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

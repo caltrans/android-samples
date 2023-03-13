@@ -8,14 +8,12 @@ gradle-based Android Studio project that [supports ambient mode](https://develop
 Pre-requisites
 --------------
 
-- Android SDK v22
+- Android SDK v31
 - Latest Android Build Tools
-- Android Support Repository
 - Wear OS emulator or device
 
 Getting Started
 ---------------
-
 
 This sample use the Gradle build system.
 
@@ -29,7 +27,7 @@ If prompted for a gradle configuration accept the default settings.
 
 Alternatively use the "gradlew build" command to build the project directly.
 
-Add your API key to the `AndroidManifest.xml` file.
+Add your API key to the `local.properties` file and call it `GOOGLE_MAPS_API_KEY`.
 See the [quick guide to getting an API key](https://developers.google.com/maps/documentation/android-api/signup).
 
 Support
@@ -51,4 +49,4 @@ CONTRIBUTING.md.
 License
 -------
 
-Please refer to the [LICENSE](https://github.com/googlemaps/android-samples/blob/master/LICENSE) at the root of this repo.
+Please refer to the [LICENSE](https://github.com/googlemaps/android-samples/blob/main/LICENSE) at the root of this repo.

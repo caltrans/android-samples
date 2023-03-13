@@ -44,7 +44,7 @@ class UiSettingsDemoActivity :
         mapFragment.getMapAsync(this)
     }
 
-    override fun onMapReady(googleMap: GoogleMap?) {
+    override fun onMapReady(googleMap: GoogleMap) {
         // Return early if map is not initialised properly
         map = googleMap ?: return
         enableMyLocation()
@@ -110,12 +110,13 @@ class UiSettingsDemoActivity :
             map.isMyLocationEnabled = true
         } else {
             EasyPermissions.requestPermissions(this, getString(R.string.location),
-                    REQUEST_CODE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION
+                    REQUEST_CODE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION
             )
         }
     }
 
     private fun hasLocationPermission(): Boolean {
-        return EasyPermissions.hasPermissions(this, Manifest.permission.ACCESS_FINE_LOCATION)
+        return EasyPermissions.hasPermissions(this, Manifest.permission.ACCESS_FINE_LOCATION) ||
+            EasyPermissions.hasPermissions(this, Manifest.permission.ACCESS_COARSE_LOCATION)
     }
 }

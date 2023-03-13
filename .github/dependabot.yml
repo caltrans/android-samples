@@ -1,16 +1,30 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 version: 2
 updates:
 - package-ecosystem: gradle
   directory: "/./ApiDemos/java"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./ApiDemos/kotlin"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.google.android.gms:play-services-basement
@@ -21,7 +35,7 @@ updates:
 - package-ecosystem: gradle
   directory: "/./WearOS"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.android.tools.build:gradle
@@ -32,28 +46,28 @@ updates:
 - package-ecosystem: gradle
   directory: "/./tutorials/java/CurrentPlaceDetailsOnMap"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./tutorials/java/MapWithMarker"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./tutorials/java/Polygons"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./tutorials/java/StyledMap"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.android.tools.build:gradle
@@ -64,21 +78,21 @@ updates:
 - package-ecosystem: gradle
   directory: "/./tutorials/kotlin/MapWithMarker"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./tutorials/kotlin/CurrentPlaceDetailsOnMap"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   commit-message:
     prefix: chore(deps)
 - package-ecosystem: gradle
   directory: "/./tutorials/kotlin/Polygons"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.android.tools.build:gradle
@@ -89,7 +103,7 @@ updates:
 - package-ecosystem: gradle
   directory: "/./snippets"
   schedule:
-    interval: weekly
+    interval: "weekly"
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.android.tools.build:gradle
